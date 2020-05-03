@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "What is SSL VPN ?"
+date:   2020-02-26 7:16:10 +0700
+categories: heroku
+---
+Finally, my custom domain for the Jekyll blog started working. Normally, it is as easy step to adding a custom domain to a Heroku app like this: 
+{% highlight shell %}
+heroku domains:add todos.phuonglong.com
+{% endhighlight %}
+
+Unfortunately, I followed this guide : https://blog.heroku.com/jekyll-on-heroku . It asked us to "https_only": true in the static.json. It caused the issue with SSL mismatch when redirection.
+ 
+{% highlight shell %}
+heroku git:clone -a blooming-blog
+{% endhighlight %}
